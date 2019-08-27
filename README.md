@@ -1,0 +1,2 @@
+# powerbeyondbi
+Most Power BI resources I'm finding focus too much on a one specific topic like data shaping with M or Power Query. Creating Calculated Columns or Measures in DAX. While these are powerful concepts, they fail to communicate to the big picture and the story that can be uncovered with each technique and how a specific technique is related to larger Data &amp; AI eco-system. I hope this set of resources helps solve this problem.
