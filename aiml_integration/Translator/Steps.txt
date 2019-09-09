@@ -1,0 +1,25 @@
+Translation:
+
+API Key: <API_Key_Here> 
+a). Three Parameters
+1.	APIKey
+2.	InputText
+3.	TranslateToLanguage
+b). Create FnTranslate Query and then Convert it to Function
+Code: 
+let
+    Source = Json.Document(Web.Contents("https://api.cognitive.microsofttranslator.com", [RelativePath="translate", Query=[
+                #"api-version" = "3.0",
+                to=TranslateToLanguage
+            ], Headers=[#"Ocp-Apim-Subscription-Key"=APIKey, #"Content-Type"="application/json"], Content=Json.FromValue({[Text = InputText]})])),
+    Source1 = Source{0},
+    translations = Source1[translations],
+    translations1 = translations{0},
+    text = translations1[text]
+in
+    text
+c). Import Text for Translation
+d). Invoke Custom Function – Change Code Insert APIKey
+e).  Convert InsertText and TranslateToLanguage to query
+d). Save as a template
+
