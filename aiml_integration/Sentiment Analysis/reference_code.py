@@ -18,3 +18,5 @@ response = requests.post(sentiment_url, headers=headers, json=d)
 sentiments = response.json()
 sentiments = sentiments['documents']
 sentiments = pd.DataFrame(data=sentiments)
+
+sentiments = pd.merge(dataset, sentiments, on="id", how="inner")
